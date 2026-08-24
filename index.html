@@ -7,7 +7,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -128,10 +128,11 @@
         .facebook { background-color: #1877f2; }
         .youtube { background-color: #ff0000; }
         .instagram { background-color: #e4405f; }
+        .save-contact { background-color: #007bff; }
         .email { background-color: #007bff; }
         .map { background-color: #dc3545; }
 
-        /* Custom QR & Scan Me Layout */
+        /* Custom QR & Scan Me Layout (Original Exact Ratio) */
         .qr-section {
             display: flex;
             align-items: center;
@@ -183,7 +184,7 @@
             border: 2px solid #ff6600;
             object-fit: cover;
             margin-right: 12px;
-            background-color: #fff;
+            background-color: #ffffff;
         }
 
         .scan-text {
@@ -199,25 +200,34 @@
     <div class="vcard-container">
         <!-- Profile Picture Header -->
         <div class="profile-wrapper">
-            <img src="profile.png" alt="Profile Picture" class="profile-img" onerror="this.src='logo.png';">
+            <img src="profile.png" alt="Sheikh Nahid" class="profile-img" onerror="this.src='logo.png';">
         </div>
 
         <!-- Contact Information Header -->
         <h1 class="profile-title">Hafiz Photostat & Computer</h1>
         <div class="profile-name">Sheikh Nahid</div>
         <div class="profile-designation">Managing Director</div>
-        <div class="profile-location">Magura Sadar, Magura</div>
+        <div class="profile-location">College Road, Magura Sadar, Magura-7600</div>
 
         <!-- Social & Action Links -->
         <div class="action-buttons">
+            <!-- Row 1: 5 Social Icons -->
             <div class="row-top">
-                <a href="tel:+8801918286191" class="icon-btn call" title="Call Us"><i class="fa fa-phone"></i></a>
+                <a href="tel:+8801918286191" class="icon-btn call" title="Call Main (+8801918286191)"><i class="fa fa-phone"></i></a>
                 <a href="https://wa.me/8801918286191" class="icon-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://www.facebook.com/hafizphotostatandcomputer/" target="_blank" class="icon-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.youtube.com/@HafizPhotostatandComputer" target="_blank" class="icon-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
                 <a href="https://www.instagram.com/hafizpc1990/" target="_blank" class="icon-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
+            <!-- Row 2: 3 Action Icons (Save Contact, Email, Location) -->
             <div class="row-bottom">
+                <!-- Inbuilt vCard Save Contact Button with Complete Details -->
+                <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ASheikh%20Nahid%0AN%3ANahid%3BSheikh%3B%3B%3B%0AORG%3AHafiz%20Photostat%20%26%20Computer%0ATITLE%3AManaging%20Director%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B8801918286191%0ATEL%3BTYPE%3DWORK%2CVOICE%3A%2B8801618286191%0AEMAIL%3BTYPE%3DINTERNET%3Ahafizpc1990%40gmail.com%0AADR%3BTYPE%3DWORK%3A%3B%3BCollege%20Road%3BMagura%20Sadar%3BMagura%3B%3B7600%3BBangladesh%0AEND%3AVCARD" 
+                   download="Sheikh_Nahid.vcf" 
+                   class="icon-btn save-contact" 
+                   title="Save Contact to Phone">
+                    <i class="fa fa-user-plus"></i>
+                </a>
                 <a href="mailto:hafizpc1990@gmail.com" class="icon-btn email" title="Email"><i class="fa fa-envelope"></i></a>
                 <a href="https://maps.app.goo.gl/kzvoJQ8q9PeUCVji9" target="_blank" class="icon-btn map" title="Location"><i class="fa fa-location-dot"></i></a>
             </div>
@@ -226,10 +236,10 @@
         <!-- QR Code & Scan Me Section -->
         <div class="qr-section">
             <div class="qr-box">
-                <img src="qr.png" alt="QR Code">
+                <img src="qr.png" alt="QR Code" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(window.location.href);">
             </div>
             <a href="qr.png" download="QR_Code.png" class="scan-me-pill">
-                <img src="profile.png" alt="Avatar" class="scan-avatar" onerror="this.src='logo.png';">
+                <img src="logo.png" alt="Company Logo" class="scan-avatar" onerror="this.src='profile.png';">
                 <span class="scan-text">Scan Me</span>
             </a>
         </div>
