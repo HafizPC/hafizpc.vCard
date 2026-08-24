@@ -7,20 +7,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #008080;
-            --primary-dark: #005f5f;
-            --secondary-color: #25d366;
-            --text-dark: #2c3e50;
-            --text-muted: #666666;
-            --bg-light: #f4f7f6;
-            --card-bg: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --radius: 16px;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -28,214 +16,222 @@
         }
 
         body {
-            font-family: 'Poppins', 'Hind Siliguri', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            background-color: #ff9900;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px 15px;
+            padding: 30px 15px;
         }
 
         .vcard-container {
             width: 100%;
-            max-width: 420px;
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .header-banner {
-            height: 120px;
-            background: linear-gradient(135deg, #008080, #004d4d);
-            position: relative;
-        }
-
-        .profile-section {
+            max-width: 380px;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            padding: 0 24px 30px 24px;
             text-align: center;
-            margin-top: -50px;
-            padding: 0 20px 20px 20px;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-top: -65px;
+            margin-bottom: 12px;
         }
 
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 4px solid #ffffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 4px solid #ff6600;
             object-fit: cover;
-            background-color: #fff;
+            background-color: #ffffff;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
         .profile-title {
             font-size: 20px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .profile-name {
+            font-size: 14px;
             font-weight: 700;
-            margin-top: 10px;
-            color: var(--text-dark);
+            color: #555555;
+            margin-bottom: 2px;
         }
 
-        .profile-subtitle {
+        .profile-designation {
             font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 2px;
-            font-weight: 500;
+            color: #777777;
+            margin-bottom: 2px;
+            font-weight: 400;
         }
 
+        .profile-location {
+            font-size: 13px;
+            color: #777777;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        /* Action Buttons Grid Layout */
         .action-buttons {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 12px;
-            padding: 15px 20px;
-            flex-wrap: wrap;
+            margin-bottom: 25px;
         }
 
-        .action-buttons a {
-            width: 45px;
-            height: 45px;
+        .row-top {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .row-bottom {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffffff;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
         }
 
-        .action-buttons a:hover {
+        .icon-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
         }
 
-        .call { background-color: #007bff; }
+        .call { background-color: #28a745; }
         .whatsapp { background-color: #25d366; }
         .facebook { background-color: #1877f2; }
         .youtube { background-color: #ff0000; }
         .instagram { background-color: #e4405f; }
-        .email { background-color: #ea4335; }
-        .map { background-color: #34a853; }
+        .email { background-color: #007bff; }
+        .map { background-color: #dc3545; }
 
-        /* Custom Horizontal QR & Scan Me Layout */
+        /* Custom QR & Scan Me Layout */
         .qr-section {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            margin: 10px 20px 20px 20px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .qr-left {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #ffffff;
-            padding: 6px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            gap: 12px;
+            margin-top: 10px;
         }
 
-        .qr-left img {
-            width: 85px;
-            height: 85px;
-            display: block;
+        .qr-box {
+            width: 58px;
+            height: 58px;
+            background-color: #000000;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
         }
 
-        .qr-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .qr-text {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-
-        .scan-me-btn {
+        .scan-me-pill {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--primary-color);
+            background-color: #000000;
             color: #ffffff;
-            padding: 8px 18px;
-            border-radius: 30px;
+            padding: 6px 20px 6px 8px;
+            border-radius: 40px;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0, 128, 128, 0.25);
-            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
         }
 
-        .scan-me-btn:hover {
-            background-color: var(--primary-dark);
+        .scan-me-pill:hover {
             transform: translateY(-2px);
         }
 
-        .footer {
-            text-align: center;
-            padding: 12px;
-            background: #fafafa;
-            border-top: 1px solid #eeeeee;
-            font-size: 11px;
-            color: #888888;
+        .scan-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ff6600;
+            object-fit: cover;
+            margin-right: 12px;
+            background-color: #fff;
+        }
+
+        .scan-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.3px;
         }
     </style>
 </head>
 <body>
 
     <div class="vcard-container">
-        <!-- Header Banner -->
-        <div class="header-banner"></div>
-
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <img src="profile.png" alt="Logo / Profile" class="profile-img" onerror="this.src='logo.png';">
-            <h1 class="profile-title">Hafiz Photostat & Computer</h1>
-            <p class="profile-subtitle">Smart Digital Business Card</p>
+        <!-- Profile Picture Header -->
+        <div class="profile-wrapper">
+            <img src="profile.png" alt="Profile Picture" class="profile-img" onerror="this.src='logo.png';">
         </div>
 
-        <!-- Action / Contact Links -->
+        <!-- Contact Information Header -->
+        <h1 class="profile-title">Hafiz Photostat & Computer</h1>
+        <div class="profile-name">Sheikh Nahid</div>
+        <div class="profile-designation">Managing Director</div>
+        <div class="profile-location">Magura Sadar, Magura</div>
+
+        <!-- Social & Action Links -->
         <div class="action-buttons">
-            <a href="tel:+8801918286191" class="call"><i class="fa fa-phone"></i></a>
-            <a href="https://wa.me/8801918286191" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/hafizphotostatandcomputer/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/@HafizPhotostatandComputer" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/hafizpc1990/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:hafizpc1990@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
-            <a href="https://maps.app.goo.gl/kzvoJQ8q9PeUCVji9" target="_blank" class="map"><i class="fa fa-location-dot"></i></a>
+            <div class="row-top">
+                <a href="tel:+8801918286191" class="icon-btn call" title="Call Us"><i class="fa fa-phone"></i></a>
+                <a href="https://wa.me/8801918286191" class="icon-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/hafizphotostatandcomputer/" target="_blank" class="icon-btn facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@HafizPhotostatandComputer" target="_blank" class="icon-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/hafizpc1990/" target="_blank" class="icon-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="row-bottom">
+                <a href="mailto:hafizpc1990@gmail.com" class="icon-btn email" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://maps.app.goo.gl/kzvoJQ8q9PeUCVji9" target="_blank" class="icon-btn map" title="Location"><i class="fa fa-location-dot"></i></a>
+            </div>
         </div>
 
-        <!-- Horizontal QR Code & Scan Me Section -->
+        <!-- QR Code & Scan Me Section -->
         <div class="qr-section">
-            <div class="qr-left">
+            <div class="qr-box">
                 <img src="qr.png" alt="QR Code">
             </div>
-            <div class="qr-right">
-                <p class="qr-text">Scan to save contact details</p>
-                <a href="qr.png" download="QR_Code.png" class="scan-me-btn">
-                    <i class="fa fa-qrcode"></i> Scan Me
-                </a>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            © Hafiz Photostat & Computer. All rights reserved.
+            <a href="qr.png" download="QR_Code.png" class="scan-me-pill">
+                <img src="profile.png" alt="Avatar" class="scan-avatar" onerror="this.src='logo.png';">
+                <span class="scan-text">Scan Me</span>
+            </a>
         </div>
     </div>
 
