@@ -132,27 +132,27 @@
         .email { background-color: #007bff; }
         .map { background-color: #dc3545; }
 
-        /* QR & Scan Me Layout (Image 2 Exact Style) */
+        /* Custom QR & Scan Me Layout */
         .qr-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
+            gap: 12px;
             margin-top: 10px;
         }
 
-        /* Large QR Box for Easy Scanning on Small Displays */
+        /* Large Prominent QR Box for Instant Camera Reading */
         .qr-box {
-            width: 110px;
-            height: 110px;
+            width: 135px;
+            height: 135px;
             background-color: #ffffff;
             border: 3.5px solid #000000;
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
         }
 
         .qr-box img {
@@ -166,7 +166,7 @@
             align-items: center;
             background-color: #000000;
             color: #ffffff;
-            padding: 6px 20px 6px 8px;
+            padding: 6px 18px 6px 8px;
             border-radius: 40px;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -177,19 +177,19 @@
             transform: translateY(-2px);
         }
 
-        /* Company Logo in Circular Avatar Inside Scan Me Pill */
+        /* Company Logo in Circle Inside Scan Me Button */
         .scan-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             border: 2px solid #ff6600;
             object-fit: cover;
-            margin-right: 12px;
-            background-color: #ffffff;
+            margin-right: 10px;
+            background-color: #1a1a1a;
         }
 
         .scan-text {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: #ffffff;
             letter-spacing: 0.3px;
@@ -201,7 +201,7 @@
     <div class="vcard-container">
         <!-- Profile Picture Header -->
         <div class="profile-wrapper">
-            <img src="profile.png" alt="Sheikh Nahid" class="profile-img" onerror="this.src='logo.png';">
+            <img src="profile.png" alt="Sheikh Nahid" class="profile-img">
         </div>
 
         <!-- Contact Information Header -->
@@ -222,7 +222,7 @@
             </div>
             <!-- Row 2: 3 Action Icons (Save Contact, Email, Location) -->
             <div class="row-bottom">
-                <!-- Built-in vCard Save Contact Button with Full Details -->
+                <!-- Built-in vCard Save Contact Button -->
                 <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3ASheikh%20Nahid%0AN%3ANahid%3BSheikh%3B%3B%3B%0AORG%3AHafiz%20Photostat%20%26%20Computer%0ATITLE%3AManaging%20Director%0ATEL%3BTYPE%3DCELL%2CVOICE%3A%2B8801918286191%0ATEL%3BTYPE%3DWORK%2CVOICE%3A%2B8801618286191%0AEMAIL%3BTYPE%3DINTERNET%3Ahafizpc1990%40gmail.com%0AADR%3BTYPE%3DWORK%3A%3B%3BCollege%20Road%3BMagura%20Sadar%3BMagura%3B%3B7600%3BBangladesh%0AEND%3AVCARD" 
                    download="Sheikh_Nahid.vcf" 
                    class="icon-btn save-contact" 
@@ -234,14 +234,14 @@
             </div>
         </div>
 
-        <!-- QR Code & Scan Me Section (Exact Image 2 Ratio) -->
+        <!-- QR Code & Scan Me Section -->
         <div class="qr-section">
             <div class="qr-box">
-                <img src="qr.png" alt="QR Code" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(window.location.href);">
+                <img src="qr.png" alt="QR Code" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(window.location.href);">
             </div>
             <a href="qr.png" download="QR_Code.png" class="scan-me-pill">
-                <!-- Company Logo in Circle (logo.png) -->
-                <img src="logo.png" alt="Company Logo" class="scan-avatar" onerror="this.src='profile.png';">
+                <!-- Company Logo in Circle -->
+                <img src="logo.png" alt="Company Logo" class="scan-avatar">
                 <span class="scan-text">Scan Me</span>
             </a>
         </div>
